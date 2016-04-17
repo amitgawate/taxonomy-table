@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Features of Javascript Inheritance Idioms</title>
+<link rel="stylesheet" type="text/css" media="screen" href="css-table.css" />
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/style-table.js"></script>
+</head>
+
+<body>
+
+<table id="features" summary="Features of Javascript Inheritance idioms">
+
+	<caption>Features of Javascript Inheritance idioms</caption>
+    
+    <thead>    
+    	<tr>
+            <th scope="col" rowspan="2">Feature matrix</th>
+            <th scope="col" colspan="4">Inheritance idiom</th>
+        </tr>
+        
+        <tr>
+            <th scope="col">Functional</th>
+            <th scope="col">Functional - Shared</th>
+            <th scope="col">Prototypal - Shared</th>
+            <th scope="col">Pseudo-Classical</th>
+        </tr>        
+    </thead>
+    
+    <tbody>
+
+        <tr>
+            <th scope="row">Multiple inheritance.  (Mixins)</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+
+    	<tr>
+    		<th scope="row">Class methods. (On ctor)</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        
+        <tr>
+        	<th scope="row">Class methods. (On ctor)</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        
+        <tr>
+        	<th scope="row">Instance methods</th>
+            <td>inside ctor</td>
+            <td>outside ctor</td>
+            <td>outside ctor</td>
+            <td>outside ctor</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Instance methods use dynamic dispatch</th>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+        	<th scope="row">How are instance properties created</th>
+            <td>on local var in ctor</td>
+            <td>on local var in ctor</td>
+            <td>on this in ctor</td>
+            <td>on this in ctor</td>
+        </tr>
+        
+        <tr>
+        	<th scope="row">Use of <b>this</b> within ctor</th>
+            <td>No. (window)</td>
+            <td>No. (window)</td>
+            <td>No. (window)</td>
+            <td>Yes. <b>new</b> calls ctor as property of new instance</td>
+        </tr>
+        
+        <tr>
+        	<th scope="row">Use of <b>this</b> in instance methods</th>
+            <td>No. They are nested functions.</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Recommend for apis.  Comfortable for javascript programmers</th>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Performance, generally</th>
+            <td>Worst</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Best</td>
+        </tr>
+
+        <tr>
+            <th scope="row">What does instance's __proto__ refer to?</th>
+            <td>Object's prototype?</td>
+            <td>Object's prototype?</td>
+            <td>Base class ctor</td>
+            <td>Base class ctor</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Ctor returns an object</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Ctor's locals are in closure of instance methods.</th>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Subclass ctor calls base ctor.</th>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Subclass ctor calls base ctor.</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Subclass ctor calls Object.create() with base.</th>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Abstract/interface classes</th>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Typescript plays well with idiom</th>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<p>Reference: hack.reactor tutorials</p>
+
+</body>
+</html>
